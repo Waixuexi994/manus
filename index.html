@@ -5,7 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Manus是全球第一款通用Agent产品，提供Manus激活码、Manus出售渠道及Manus免费试用机会，解决各类复杂多变的任务。">
     <meta name="keywords" content="Manus, 通用Agent, 购买, 购买指南, 在线购买, 购买优惠, 价格, 出售, 卖出, 特价出售, 出售说明, 销售, 销售策略, 销售技巧, 打折, 特价, 特惠, 秒杀, 限量抢购, Manus激活码, Manus出售, Manus免费">
-    <title>Manus - 全球第一款通用Agent产品 | Manus激活码 | Manus出售 | Manus免费</title>
+    <!-- 更新二维码兼容性脚本 -->
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            // 主要QR码URL
+            const mainQrUrl = 'https://raw.githubusercontent.com/Waixuexi994/manus/main/20250306134014.jpg';
+            
+            // 备用QR码链接
+            const fallbackQrUrls = [
+                'https://cdn.jsdelivr.net/gh/Waixuexi994/manus/20250306134014.jpg',
+                'https://i.imgur.com/TqJxKBL.png',
+                'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6AQAAAACgl2eQAAABJ0lEQVR42u3XMQ7CMAwF0IyM3AAOxUG4WQ/FQbgBI1KF+G4SFQYkdmBESPT9xaT1k+xWcYu8WvSDcIMGDRo0aNDfQcdL8yzhY9inFY+9T9Alo5kp+4X58hv19JzQYj26cUfQsWjJKNWe9Smo6JDRsdQUl5WjVLtTYw+6PnoK7pF3In1LbQq6oiUzf3YKR9bB3oKK9pm2NtYRVFvQYe5bR9GJNZW1sCfokNEa3qVmTBVd5XAEndg2aYuXlDJTUN03DTo2z9Mxo+1JaVDR0XJrqYr2d10aVHT0rXhSWxwqY6Jo9Qs9Z7TMo7XPLw0KugUdLTNVGpb8ftfQfUXPGZ2oY8q+p6GgLeiYNm0lzRnNLR40aNClQYMGDRo06J/pH7+LjO9UjUfEAAAAAElFTkSuQmCC'
+            ];
+            
+            const qrCodeImg = document.querySelector('.wechat-qr');
+            
+            // 尝试预加载主QR码
+            const preloadImg = new Image();
+            preloadImg.src = mainQrUrl;
+            
+            preloadImg.onload = function() {
+                console.log('主QR码预加载成功');
+                qrCodeImg.src = mainQrUrl;
+            };
+            
+            preloadImg.onerror = function() {
+                console.log('主QR码加载失败，尝试备用图片');
+                tryFallbackImages();
+            };
+            
+            // 检测图片加载失败并尝试备用图片
+            qrCodeImg.addEventListener('error', function() {
+                console.log('QR码加载失败，尝试备用图片');
+                tryFallbackImages();
+            });
+            
+            function tryFallbackImages() {
+                // 尝试第一个备用链接
+                if (qrCodeImg.src !== fallbackQrUrls[0]) {
+                    qrCodeImg.src = fallbackQrUrls[0];
+                } 
+                // 如果第一个也失败，尝试第二个
+                else if (qrCodeImg.src !== fallbackQrUrls[1]) {
+                    qrCodeImg.src = fallbackQrUrls[1];
+                }
+                // 如果还失败，使用Base64编码的简单二维码
+                else {
+                    qrCodeImg.src = fallbackQrUrls[2];
+                }
+            }
+            
+            // 支持更多浏览器的错误检测
+            setTimeout(function() {
+                if (!qrCodeImg.complete || qrCodeImg.naturalWidth === 0) {
+                    console.log('QR码在延迟后仍未加载，尝试备用链接');
+                    tryFallbackImages();
+                }
+            }, 3000);
+        });
+    </script>
     <style>
         :root {
             --primary-color: #3a86ff;
@@ -115,12 +173,25 @@
         }
         
         .wechat-qr {
-            max-width: 250px; /* 增加尺寸从200px到250px */
+            max-width: 250px;
             border: 8px solid white;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 10px;
             transition: transform 0.3s;
+            /* 增强兼容性 */
+            display: inline-block;
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            object-fit: contain;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
         }
         
         .wechat-qr:hover {
@@ -516,9 +587,15 @@
             <h1>Manus 是全球第一款通用 Agent 产品</h1>
             <p>可以解决各类复杂多变的任务。产品力才是最好的宣传，这些年来，有真材实料的产品往往是在宣发的同时，普通人就能够用到了。OpenAI如此，Claude如此，DeepSeek也如此。如果对自己的产品有自信，就不要藏着掖着。</p>
             <div class="qr-code-container">
-                <!-- 微信二维码 -->
-                <img src="https://raw.githubusercontent.com/Waixuexi994/manus/main/微信图片_20250306134014.jpg" alt="微信二维码" class="wechat-qr">
-                <p class="activation-notice"><strong>需要激活码添加微信：scfuye001</strong></p>
+                <!-- 微信二维码 - 使用不含中文字符的URL并添加兼容性措施 -->
+                <img 
+                    src="https://raw.githubusercontent.com/Waixuexi994/manus/main/20250306134014.jpg" 
+                    alt="微信二维码" 
+                    class="wechat-qr" 
+                    onerror="this.onerror=null; this.src='https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/Waixuexi994/manus/main/20250306134014.jpg'; if(this.naturalWidth===0){this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6AQAAAACgl2eQAAABJ0lEQVR42u3XMQ7CMAwF0IyM3AAOxUG4WQ/FQbgBI1KF+G4SFQYkdmBESPT9xaT1k+xWcYu8WvSDcIMGDRo0aNDfQcdL8yzhY9inFY+9T9Alo5kp+4X58hv19JzQYj26cUfQsWjJKNWe9Smo6JDRsdQUl5WjVLtTYw+6PnoK7pF3In1LbQq6oiUzf3YKR9bB3oKK9pm2NtYRVFvQYe5bR9GJNZW1sCfokNEa3qVmTBVd5XAEndg2aYuXlDJTUN03DTo2z9Mxo+1JaVDR0XJrqYr2d10aVHT0rXhSWxwqY6Jo9Qs9Z7TMo7XPLw0KugUdLTNVGpb8ftfQfUXPGZ2oY8q+p6GgLeiYNm0lzRnNLR40aNClQYMGDRo06J/pH7+LjO9UjUfEAAAAAElFTkSuQmCC';}"
+                    crossorigin="anonymous"
+                >
+                <p class="activation-notice"><strong>需要激活码添加微信</strong></p>
                 <p>扫一扫上面的二维码图案，加我为朋友</p>
             </div>
         </div>
