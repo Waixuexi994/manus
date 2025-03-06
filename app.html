@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manus是全球第一款通用Agent产品，可以解决各类复杂多变的任务。现在购买Manus，享受特价优惠。">
+    <meta name="keywords" content="Manus, 通用Agent, 购买, 购买指南, 在线购买, 购买优惠, 价格, 出售, 卖出, 特价出售, 出售说明, 销售, 销售策略, 销售技巧, 打折, 特价, 特惠, 秒杀, 限量抢购">
+    <title>Manus - 全球第一款通用Agent产品 | 在线购买</title>
+    <style>
+        :root {
+            --primary-color: #3a86ff;
+            --secondary-color: #ff006e;
+            --dark-color: #14213d;
+            --light-color: #f8f9fa;
+            --success-color: #06d6a0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--dark-color) 0%, #2a4081 100%);
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* 微信二维码样式 */
+        .qr-code-container {
+            margin: 20px auto;
+            text-align: center;
+        }
+        
+        .wechat-qr {
+            max-width: 200px;
+            border: 8px solid white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .wechat-qr:hover {
+            transform: scale(1.05);
+        }
+        
+        .qr-code-container p {
+            font-size: 1.1rem;
+            color: white;
+            margin-top: 10px;
+        }
+        
+        .activation-notice {
+            color: #ff0000;
+            font-weight: bold;
+            font-size: 1.3rem !important;
+            text-shadow: 0 0 3px rgba(255,255,255,0.5);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        .video-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .video-container {
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+        
+        .features {
+            padding: 80px 0;
+            background-color: #f5f7fa;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--dark-color);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .pricing {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-header {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .pricing-name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        
+        .pricing-price span {
+            font-size: 1rem;
+            font-weight: normal;
+        }
+        
+        .pricing-features {
+            padding: 20px;
+        }
+        
+        .pricing-features ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .pricing-features li:before {
+            content: "✓";
+            color: var(--success-color);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .pricing-btn {
+            display: block;
+            text-align: center;
+            margin: 20px;
+        }
+        
+        .testimonials {
+            padding: 80px 0;
+            background-color: #f5f7fa;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-text:before {
+            content: """;
+            font-size: 4rem;
+            color: #eee;
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            z-index: 0;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        .cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .cta-btn {
+            background-color: white;
+            color: var(--dark-color);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #333;
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .copyright {
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        /* 用于促销标签 */
+        .promo-badge {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Manus</a>
+                <ul class="nav-links">
+                    <li><a href="#features">功能</a></li>
+                    <li><a href="#pricing">价格</a></li>
+                    <li><a href="#testimonials">用户评价</a></li>
+                    <li><a href="#" class="btn">立即购买</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Manus 是全球第一款通用 Agent 产品</h1>
+            <p>可以解决各类复杂多变的任务。产品力才是最好的宣传，这些年来，有真材实料的产品往往是在宣发的同时，普通人就能够用到了。OpenAI如此，Claude如此，DeepSeek也如此。如果对自己的产品有自信，就不要藏着掖着。</p>
+            <div class="qr-code-container">
+                <!-- 微信二维码 -->
+                <img src="https://raw.githubusercontent.com/Waixuexi994/manus/main/微信图片_20250306134014.jpg" alt="微信二维码" class="wechat-qr">
+                <p class="activation-notice"><strong>需要激活码添加微信</strong></p>
+                <p>扫一扫上面的二维码图案，加我为朋友</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="container">
+            <div class="video-container">
+                <video controls>
+                    <source src="https://files.manuscdn.com/assets/video/Manus-Chinese-2k-compressed-v2.mp4" type="video/mp4">
+                    您的浏览器不支持视频标签。
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">为什么选择 Manus？</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3 class="feature-title">全球领先的通用Agent</h3>
+                    <p>Manus是全球第一款真正意义上的通用Agent产品，可以解决各种领域的复杂问题，不再需要多个专业工具。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3 class="feature-title">适应复杂多变任务</h3>
+                    <p>无论是数据分析、内容创作、市场研究还是客户服务，Manus都能够灵活应对，为您提供全方位解决方案。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">高效率工作流程</h3>
+                    <p>通过自动化和智能化处理，Manus可以大幅提升您的工作效率，让您专注于真正重要的决策和创造。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">安全可靠</h3>
+                    <p>采用先进的加密技术和隐私保护措施，确保您的数据安全，让您放心使用。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3 class="feature-title">持续学习与进化</h3>
+                    <p>Manus能够不断学习和适应新的任务和环境，随着使用时间的增长，表现会越来越出色。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3 class="feature-title">贴心的客户支持</h3>
+                    <p>我们的专业团队随时为您提供技术支持和使用指导，确保您能够充分发挥Manus的潜力。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 价格方案部分已移除 -->
+
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">客户评价</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>Manus彻底改变了我们的工作方式。以前需要多个团队协作的项目，现在只需要一个人配合Manus就能完成。效率提升了至少300%。</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/50/50" alt="用户头像">
+                        <div class="author-info">
+                            <h4>张先生</h4>
+                            <p>某科技公司CTO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>作为一名自由职业者，Manus让我能够承接更多样化的项目。它就像我的得力助手，帮我处理大量繁琐的工作，让我能专注于创意部分。</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/50/50" alt="用户头像">
+                        <div class="author-info">
+                            <h4>李女士</h4>
+                            <p>自由设计师</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>我们公司使用Manus已经半年了，客户满意度提升了45%，员工工作压力也减轻了很多。这个投资回报率远超预期。</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/50/50" alt="用户头像">
+                        <div class="author-info">
+                            <h4>王总</h4>
+                            <p>某咨询公司CEO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>立即体验Manus的强大能力</h2>
+            <p>现在注册即可获得14天免费试用，不满意全额退款！</p>
+            <a href="#" class="btn cta-btn">开始免费试用</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>产品</h3>
+                    <ul>
+                        <li><a href="#">功能介绍</a></li>
+                        <li><a href="#">价格方案</a></li>
+                        <li><a href="#">购买指南</a></li>
+                        <li><a href="#">在线购买</a></li>
+                        <li><a href="#">购买优惠</a></li>
+                        <li><a href="#">特价促销</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>资源</h3>
+                    <ul>
+                        <li><a href="#">文档中心</a></li>
+                        <li><a href="#">API参考</a></li>
+                        <li><a href="#">教程视频</a></li>
+                        <li><a href="#">案例研究</a></li>
+                        <li><a href="#">社区论坛</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>公司</h3>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">合作伙伴</a></li>
+                        <li><a href="#">媒体资源</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>帮助</h3>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">客户支持</a></li>
+                        <li><a href="#">销售咨询</a></li>
+                        <li><a href="#">退款政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#"><span>微博</span></a>
+                    <a href="#"><span>微信</span></a>
+                    <a href="#"><span>知乎</span></a>
+                    <a href="#"><span>B站</span></a>
+                </div>
+                <p class="copyright">&copy; 2025 Manus. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
